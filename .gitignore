@@ -1,0 +1,4 @@
+config/*
+!config/default.js
+!config/dev.js
+node_modules

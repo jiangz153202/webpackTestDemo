@@ -1,0 +1,46 @@
+{
+  "name": "webpack-zhihu-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local":"npm run dev --config=local",
+    "dev": "webpack-dev-server -d --hot --env.dev --env.config dev",
+    "build": "rimraf dist && webpack -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.1",
+    "eslint-config-enough": "^0.2.8",
+    "eslint-loader": "^1.9.0",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2"
+    ]
+  },
+  "eslintConfig":{
+    "parser":"babel-eslint",
+    "extends":"enough",
+    "env":{
+       "browser":true,
+       "node":true
+    }
+  }
+}
